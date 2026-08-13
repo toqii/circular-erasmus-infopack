@@ -68,6 +68,7 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   scroll-padding-top: var(--nav-height);
+  overflow-x: hidden;
 }
 
 body {
@@ -1099,6 +1100,33 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.8;
 }
 
+.contact-box__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--teal-mid);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  background: rgba(26, 92, 87, 0.05);
+  transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+}
+
+.contact-link:hover {
+  background: rgba(26, 92, 87, 0.1);
+  color: var(--teal-deep);
+  transform: translateY(-2px);
+}
+
 
 /* ============================================================
    FOOTER
@@ -1812,55 +1840,52 @@ h1, h2, h3, h4, h5, h6 {
   /* Nav mobile */
   .nav__toggle {
     display: flex;
+    position: relative;
+    z-index: 10001;
+  }
+
+  .nav__logo {
+    position: relative;
+    z-index: 10001;
   }
 
   .nav__links {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9998;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    z-index: 10000;
     background: var(--cream);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.15rem;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: opacity var(--transition-base), visibility var(--transition-base), 
-                transform var(--transition-base);
+    gap: 0.1rem;
     overflow-y: auto;
-    padding: 5rem 1.5rem 2rem;
+    -webkit-overflow-scrolling: touch;
+    padding: calc(var(--nav-height) + 1rem) 1.5rem 2rem;
   }
 
   .nav__links.open {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+    display: flex;
   }
 
   .nav__links a {
-    font-size: 1rem;
-    padding: 0.7rem 1.5rem;
+    font-size: 0.95rem;
+    padding: 0.65rem 1.5rem;
     width: 100%;
-    max-width: 280px;
+    max-width: 260px;
     text-align: center;
     border-radius: var(--radius-md);
+    color: var(--charcoal);
   }
 
   .nav__links a:hover,
   .nav__links a.active {
     background: rgba(26, 92, 87, 0.08);
-  }
-
-  .nav__toggle {
-    z-index: 9999;
-  }
-
-  .nav__logo {
-    z-index: 9999;
+    color: var(--teal-deep);
   }
 
   /* Hero mobile */
