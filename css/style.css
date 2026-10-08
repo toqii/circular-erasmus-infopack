@@ -2125,3 +2125,37 @@ button:focus-visible {
     color: black;
   }
 }
+
+/* Practical information additions reuse the existing design tokens. */
+.practical-subsection { margin-top: 3rem; scroll-margin-top: calc(var(--nav-height) + 1rem); }
+.practical-shortcuts { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+.practical-shortcuts a { padding: .7rem 1rem; background: var(--mist); color: var(--teal-deep); border-radius: var(--radius-md); font-weight: 600; font-size: .9rem; }
+.practical-shortcuts a:hover { background: var(--sand); }
+.support-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.support-card { padding: 1.75rem; border-radius: var(--radius-lg); background: var(--white); border: 1px solid var(--mist); box-shadow: var(--shadow-card); overflow-wrap: anywhere; }
+.support-card h4 { font-size: 1.15rem; margin-bottom: .75rem; }
+.support-card p + p { margin-top: .8rem; }
+.support-card--primary { background: var(--mist); border-color: var(--sage); }
+.support-card--wide { grid-column: 1 / -1; }
+.support-card__number { display: inline-block; color: var(--teal-deep); font: 700 3rem 'Outfit', sans-serif; margin-bottom: .75rem; }
+.support-card__hospital { font: 600 1.4rem/1.4 'Outfit', sans-serif; color: var(--teal-deep); }
+.inline-link { text-decoration: underline; text-underline-offset: .2em; }
+.currency-badge { display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 0 0 145px; background: var(--mist); color: var(--teal-deep); border-radius: var(--radius-md); padding: 1rem; }
+.currency-badge > span:first-child { font: 700 3rem 'Outfit', sans-serif; }
+.currency-badge strong { font-size: 1.2rem; }
+.currency-badge > span:last-child { font-size: .85rem; }
+.money-card .info-box__text { min-width: 0; }
+.dietary-heading { margin: 1.5rem 0 .5rem; }
+.compatibility-note { padding: 1rem; border-radius: var(--radius-sm); background: var(--mist); }
+@media (max-width: 768px) {
+  .nav, .nav.scrolled { backdrop-filter: none; -webkit-backdrop-filter: none; background: var(--cream); }
+  .nav__links { width: 100%; justify-content: flex-start; gap: .1rem; }
+  .nav__links a { flex-shrink: 0; }
+  .support-grid { grid-template-columns: minmax(0, 1fr); }
+  .support-card { padding: 1.25rem; }
+  .money-card { flex-direction: column; }
+  .currency-badge { flex-basis: auto; align-self: stretch; }
+  .location-card__btn { max-width: 100%; white-space: normal; overflow-wrap: anywhere; text-align: center; }
+}
+.money-card { display: flex; gap: 1.5rem; }
+@media (max-width: 768px) { .programme-timeline .programme-day-grid { grid-template-columns: minmax(0, 1fr); } }

@@ -51,6 +51,10 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 
+  // Restore page scrolling when switching from an open mobile menu to desktop.
+  const mobileViewport = window.matchMedia('(max-width: 768px)');
+  mobileViewport.addEventListener('change', function () { closeMenu(); });
+
   /* ---------- NAVBAR SCROLL EFFECT ---------- */
   const nav = document.querySelector('.nav');
 

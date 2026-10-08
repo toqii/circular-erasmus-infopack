@@ -41,7 +41,7 @@
       </a>
 
       <!-- Mobile menu toggle button -->
-      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
         <span></span>
         <span></span>
         <span></span>
@@ -766,24 +766,6 @@
 
       </div>
 
-      <!-- Weather -->
-      <div class="reveal" style="margin-top: 3rem;">
-        <span class="section-label"><span class="icon">🌤️</span> Climate</span>
-        <h3 class="section-title" style="font-size: 1.75rem;">Weather in Antalya</h3>
-      </div>
-
-      <div class="info-box info-box--highlight reveal">
-        <span class="info-box__icon">🌤️</span>
-        <div class="info-box__text">
-          <p>The project takes place from <strong>28 October to 4 November 2026</strong>. Antalya enjoys a Mediterranean climate with mild autumn temperatures, but late October and early November can occasionally bring rain and cooler evenings.</p>
-          <p>We recommend checking the forecast before travelling, as weather conditions can change.</p>
-        </div>
-        <div style="margin-top: 1.25rem; text-align: center;">
-          <a href="https://www.accuweather.com/en/tr/antalya/316939/october-weather/316939" target="_blank" rel="noopener noreferrer" class="location-card__btn">
-            🌤️ View Antalya Weather on AccuWeather →
-          </a>
-        </div>
-      </div>
 
     </div>
   </section>
@@ -801,14 +783,72 @@
         <p class="section-subtitle">Essential details for your trip.</p>
       </div>
 
+      <div class="practical-shortcuts reveal" aria-label="Practical information shortcuts">
+        <a href="#emergency">📞 Emergency Information · 112 / 157</a>
+        <a href="#money">₺ Money &amp; Payments</a>
+        <a href="#sim">📱 SIM &amp; eSIM</a>
+      </div>
+
+      <div id="emergency" class="practical-subsection">
+        <div class="reveal">
+          <span class="section-label">📞 Safety &amp; Support</span>
+          <h3 class="section-title" style="font-size: 1.5rem;">Emergency Information</h3>
+        </div>
+        <div class="support-grid reveal-children">
+          <div class="support-card support-card--primary">
+            <h4>Emergency Services</h4>
+            <a class="support-card__number" href="tel:112" aria-label="Call emergency services on 112">112</a>
+            <p>For all emergency services, simply dial 112 on your phone.</p>
+          </div>
+          <div class="support-card">
+            <h4>Nearest Hospital</h4>
+            <p class="support-card__hospital">Akdeniz University Hospital</p>
+            <!-- Add an official hospital location link here when supplied by the organisers. -->
+          </div>
+          <div class="support-card support-card--wide">
+            <h4>Support Line for Foreigners in Türkiye</h4>
+            <a class="support-card__number" href="tel:157" aria-label="Call YIMER on 157">157</a>
+            <p>YİMER (Foreigners Communication Center), operated by the Presidency of Migration Management of the Republic of Türkiye, provides support and information for foreign guests in Türkiye.</p>
+            <p><strong>International Calls:</strong> <a class="inline-link" href="tel:+903121571122">+90 312 157 11 22</a></p>
+            <p data-yimer-service>Service Language: 24/7 service is available in 7 languages, including English, German, Russian, Arabic, Persian and Turkish.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Weather: external preview; no embedded forecast or unverified temperatures -->
+      <div class="reveal" style="margin-top: 3rem;">
+        <span class="section-label"><span class="icon">🌤️</span> Climate</span>
+        <h3 class="section-title" style="font-size: 1.75rem;">Weather in Antalya</h3>
+      </div>
+
+      <div class="info-box info-box--highlight reveal">
+        <span class="info-box__icon" aria-hidden="true">🌤️</span>
+        <div class="info-box__text">
+          <h4>Antalya Weather Preview</h4>
+          <p>The project takes place from <strong>29 October to 3 November 2026</strong>, with arrival on 28 October and departure on 4 November. Antalya enjoys a Mediterranean climate with mild autumn temperatures, but late October and early November can occasionally bring rain and cooler evenings.</p>
+          <p>We recommend checking the forecast before travelling, as weather conditions can change.</p>
+        </div>
+        <div style="margin-top: 1.25rem; text-align: center;">
+          <a href="https://www.accuweather.com/en/tr/antalya/316939/october-weather/316939" target="_blank" rel="noopener noreferrer" class="location-card__btn">
+            🌤️ View Antalya Weather on AccuWeather →
+          </a>
+        </div>
+      </div>
+
+
       <!-- Food & Dietary Requirements -->
       <div class="reveal" style="margin-top: 2.5rem;">
         <span class="section-label"><span class="icon">🍽️</span> Meals</span>
-        <h3 class="section-title" style="font-size: 1.5rem;">Food &amp; Dietary Requirements</h3>
+        <h3 class="section-title" style="font-size: 1.5rem;">Meals</h3>
       </div>
 
       <div class="info-box reveal">
         <div class="info-box__text">
+          <p><strong>Three meals per day are included during the project.</strong></p>
+          <p><strong>Breakfast</strong> is served at the accommodation.</p>
+          <p><strong>Lunch</strong> will be available at cafés and restaurants on the university campus or provided as takeaway, depending on the daily programme.</p>
+          <p><strong>Dinner</strong> is provided by a catering company serving home-style meals.</p>
+          <h4 class="dietary-heading">Food &amp; Dietary Requirements</h4>
           <p>Meals will mainly include vegetables, meat dishes and traditional Turkish cuisine. Vegetarian options will also be available.</p>
         </div>
       </div>
@@ -817,6 +857,34 @@
         <span class="info-box__icon">⚠️</span>
         <div class="info-box__text">
           <p><strong>Participants should inform the organisers in advance about any allergies, intolerances or special dietary requirements.</strong></p>
+        </div>
+      </div>
+
+      <div id="money" class="practical-subsection reveal">
+        <span class="section-label">💳 Everyday Essentials</span>
+        <h3 class="section-title" style="font-size: 1.5rem;">Money &amp; Payments</h3>
+        <div class="info-box money-card">
+          <div class="currency-badge"><span aria-hidden="true">₺</span><strong>TRY</strong><span>Turkish Lira</span></div>
+          <div class="info-box__text">
+            <p>Türkiye uses the Turkish lira (TRY, ₺).</p>
+            <p>Participants are advised to carry a small amount of cash or withdraw some Turkish lira after arrival for small shops, tips and places that may not accept cards. Card payments are widely available, so for most everyday expenses, using a debit or credit card should be convenient.</p>
+            <p>International debit and credit cards can generally be used in Türkiye.</p>
+            <p>Contactless/card payments can also be used on public transportation in Antalya where supported.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="sim" class="practical-subsection reveal">
+        <span class="section-label">📱 Mobile Internet</span>
+        <h3 class="section-title" style="font-size: 1.5rem;">SIM &amp; eSIM</h3>
+        <div class="info-box">
+          <div class="info-box__text">
+            <p>We recommend purchasing a SIM card or eSIM so that you can stay connected during your time in Türkiye.</p>
+            <p>Participants can purchase a local SIM card or eSIM. However, local eSIM options may be relatively expensive for foreign visitors.</p>
+            <p>If your phone supports eSIM, you may consider purchasing a Türkiye-compatible eSIM through the MobiMatter app, which offers a range of reasonably priced options.</p>
+            <p>If your phone does not support eSIM, tourist SIM cards can be purchased at the airport, in the city centre or from local mobile network operators.</p>
+            <p class="compatibility-note"><strong>Before purchasing:</strong> Make sure your phone is unlocked and compatible with the service.</p>
+          </div>
         </div>
       </div>
 
