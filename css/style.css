@@ -2139,6 +2139,9 @@ button:focus-visible {
 .support-card--wide { grid-column: 1 / -1; }
 .support-card__number { display: inline-block; color: var(--teal-deep); font: 700 3rem 'Outfit', sans-serif; margin-bottom: .75rem; }
 .support-card__hospital { font: 600 1.4rem/1.4 'Outfit', sans-serif; color: var(--teal-deep); }
+.support-card--location { display: block; transition: border-color var(--transition-fast), box-shadow var(--transition-fast); }
+.support-card--location:hover { border-color: var(--sage); box-shadow: var(--shadow-md); }
+.support-card__location-hint { display: block; margin-top: 1rem; font-size: .85rem; font-weight: 600; color: var(--teal-mid); }
 .inline-link { text-decoration: underline; text-underline-offset: .2em; }
 .currency-badge { display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 0 0 145px; background: var(--mist); color: var(--teal-deep); border-radius: var(--radius-md); padding: 1rem; }
 .currency-badge > span:first-child { font: 700 3rem 'Outfit', sans-serif; }
